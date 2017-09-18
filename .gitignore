@@ -1,3 +1,7 @@
 .DS_Store
 np_cultural.json
 np_cultural_sentiment.csv
+playlist.csv
+mb_artists.csv
+mb_tracks.csv
+nowplaying.csv
