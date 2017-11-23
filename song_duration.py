@@ -13,7 +13,10 @@ from difflib import SequenceMatcher
 client = MongoClient()
 db = client.now_playing
 #Spotify Instance
-client_credentials_manager = SpotifyClientCredentials(client_id="7736d10450e04c5f9e302bb07a4f6cf7", client_secret="a11e29bc5c324ddeb19fc6249d303814",)
+client_data = {}
+with open("secrets.json", 'r') as f:
+    client_data = json.load(f)
+client_credentials_manager = SpotifyClientCredentials(client_id=client_data["client_id"], client_secret=client_data["client_secret"],)
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
 
 # In[0]:
